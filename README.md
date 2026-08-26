@@ -1,6 +1,5 @@
-# github-actions-aws-s3-cicd
+# AjokeTechHub — Automated Cloud Deployment Pipeline
 CI/CD pipeline for automated AWS S3 deployments via GitHub Actions
-
 ## Executive Summary
 
 This project implements a secure, fully automated CI/CD pipeline that deploys a static website from a GitHub repository to a globally distributed HTTPS endpoint using AWS S3 and CloudFront. Every push to `main` triggers an automated security and quality gate, followed by a keyless deployment to AWS using OpenID Connect (OIDC) — eliminating the need for long-lived AWS access keys entirely.
