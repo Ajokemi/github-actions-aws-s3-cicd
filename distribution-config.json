@@ -1,0 +1,30 @@
+{
+  "CallerReference": "ajoketechhub-1787733598",
+  "Comment": "ajoketechhub static site distribution",
+  "Enabled": true,
+  "DefaultRootObject": "index.html",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3-ajoketechhub-site-1787731351",
+        "DomainName": "ajoketechhub-site-1787731351.s3.amazonaws.com",
+        "OriginAccessControlId": "E1LBDJ5ESC7FYO",
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3-ajoketechhub-site-1787731351",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": ["GET", "HEAD"]
+    },
+    "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+    "Compress": true
+  },
+  "PriceClass": "PriceClass_100"
+}
