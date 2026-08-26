@@ -147,12 +147,12 @@ git push origin main
 
 ## 7. Screenshots
 
-> Replace each placeholder below with an actual screenshot saved in a `/screenshots` folder in this repo, referenced via `![alt text](screenshots/filename.png)`.
+actual screenshot saved in a `/assets` folder in this repo
 
-- [ ] **GitHub Repository Structure** — full file tree showing `.github/workflows/`, `site/`, `README.md`
-- [ ] **GitHub Actions Workflow File** — `deploy.yml` open in the GitHub code view
-- [ ] **Successful Pipeline Run** — green checkmark on the Actions tab, both jobs passed
-- [ ] **Live HTTPS Site** — browser screenshot showing the CloudFront URL loading the site with the padlock/HTTPS indicator
+**GitHub Repository Structure** — full file tree showing `.github/workflows/`, `site/`, `README.md`
+**GitHub Actions Workflow File** — `deploy.yml` open in the GitHub code view
+**Successful Pipeline Run** — green checkmark on the Actions tab, both jobs passed
+**Live HTTPS Site** — browser screenshot showing the CloudFront URL loading the site with the padlock/HTTPS indicator
 
 ## 8. Live Demo Proof Point
 
