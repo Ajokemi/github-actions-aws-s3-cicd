@@ -5,6 +5,14 @@ CI/CD pipeline for automated AWS S3 deployments via GitHub Actions
 
 This project implements a secure, fully automated CI/CD pipeline that deploys a static website from a GitHub repository to a globally distributed HTTPS endpoint using AWS S3 and CloudFront. Every push to `main` triggers an automated security and quality gate, followed by a keyless deployment to AWS using OpenID Connect (OIDC) — eliminating the need for long-lived AWS access keys entirely.
 
+## Note on CloudFront Deployment Status
+
+During implementation, AWS placed a standard account-level verification hold on this account before allowing new CloudFront distributions — a routine check applied to newer AWS accounts, unrelated to any configuration in this project. A support case was opened with AWS and is currently pending resolution.
+
+All CloudFront-side configuration — Origin Access Control, distribution config, and the CloudFront-scoped bucket policy — is fully built and documented in this repository, ready to activate the moment the account is verified. The cache-invalidation step in `deploy.yml` is included but commented out pending the distribution ID.
+
+For live demonstration purposes, the static site is temporarily accessible via S3 static website hosting: `[paste your S3 website URL here]`
+
 ## 1. Business Problem
 
 Manual website deployment introduces three recurring risks in production environments:
