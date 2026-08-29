@@ -12,7 +12,6 @@ permissions:
 env:
   AWS_REGION: us-east-1
   S3_BUCKET: ajoketechhub-site-1787731351
-  # We'll add CLOUDFRONT_DISTRIBUTION_ID once the support case clears
 
 jobs:
   lint-and-scan:
@@ -51,7 +50,7 @@ jobs:
       - name: Configure AWS credentials via OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::541673202339:role/github-actions-s3-deploy-role
+          role-to-assume: arn:aws:iam:: 
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync site to S3
@@ -70,7 +69,7 @@ jobs:
             "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | \
             cut -d '.' -f2 | base64 -d 2>/dev/null | python3 -m json.tool || true
             
-      # Uncomment once CloudFront distribution ID is available:
+      # CloudFront distribution ID 
       # - name: Invalidate CloudFront cache
       #   run: |
       #     aws cloudfront create-invalidation \
